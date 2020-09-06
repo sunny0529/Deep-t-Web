@@ -30,7 +30,7 @@ STATICFILES_DIRS=[
     STATIC_DIR,
 ]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-13-124-85-82.ap-northeast-2.compute.amazonaws.com']
 
 
 # Application definition
