@@ -63,7 +63,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' #DEFAULT_FILE_STORAGE: 장고의 기본 저장 시스템 클래스를 지정해주는 설정이다. 기본적으로 FileSystemStorage 를 사용한다.
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' #STATICFILES_STORAGE: collectstatic 명령을 실행했을 때 생성되는 스태틱 폴더를 S3 버킷 저장소에 생성하도록 하는 설정이다.
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage' #STATICFILES_STORAGE: collectstatic 명령을 실행했을 때 생성되는 스태틱 폴더를 S3 버킷 저장소에 생성하도록 하는 설정이다.
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'path/to/store/my/files/')
 
 
