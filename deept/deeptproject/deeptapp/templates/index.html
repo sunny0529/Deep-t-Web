@@ -1,0 +1,28 @@
+<!--4. templates-->
+{% load static %}
+
+<body></body>
+    <a href="{% url 'img' %}">Image</a>
+
+    <h1>TEST!</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="img-file">
+        <input type="submit">
+    </form>
+
+
+{% if object.img %}
+    <script src="https://cdn.jwplayer.com/libraries/4vsiXODM.js"></script>
+    <script>jwplayer.key="3+ZZkl6fRXVNBesmmliN4D4xb9TAsJQPELfUpLHgIQ2dQLP+hNpw/4Wfb4rMlhcg"</script>
+    <div id="mElement">Loading the player2...</div>
+    <script type="text/JavaScript">
+        jwplayer("mElement").setup({
+            "playlist": [{
+                    "file":"{{ object.img.url }}"}]
+        });
+    </script>
+{% else %}
+    
+{% endif %}
+</body>

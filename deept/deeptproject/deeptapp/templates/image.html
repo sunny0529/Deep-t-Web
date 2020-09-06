@@ -1,0 +1,21 @@
+<!--4. templates-->
+{% load static %}
+
+<body>
+    <a href="{% url 'vid' %}">Video</a>
+
+    <h1>TEST!</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="img-file">
+        <input type="submit">
+    </form>
+    
+{% if object.img %}
+    <img src="{{ object.img.url }}" alt="sos">
+
+{% else %}
+
+{% endif %}
+
+</body>
