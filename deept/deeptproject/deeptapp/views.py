@@ -8,7 +8,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Image
 from django.shortcuts import render, redirect
-from .deepfakeclassification import do
+
 #render는 최대 3개의 인자까지 받을 수 있습니다.
 #첫번째로 request, 두번째로 html 파일과 같은 템플릿, 마지막으로 dictionary 형 인자입니다.
 #dictionary 형 인자는 파이썬 변수를 html 파일로 넘길 때 사용하는데 조금 이따 다뤄보도록 하겠습니다.
@@ -24,7 +24,7 @@ def show_vid(request):
         #video_path패턴으로 설정
         video_path = "https://deept.s3.ap-northeast-2.amazonaws.com/usr/Kakao1.mp4"
         #결과값을 템플릿에 띄우는 법
-        result = do(video_path)
+        #result = do(video_path)
         vid_status = 1
         return redirect(show_vid)
 
